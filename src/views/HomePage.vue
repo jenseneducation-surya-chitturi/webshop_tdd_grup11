@@ -1,28 +1,23 @@
-
 <template>
-<div class="home">
+  <div class="home">
+    <div class="container">
+      <NavigationPage />
+      <img alt="Vue logo" src="../assets/wallpaper.png" />
 
-  <div class="container">
-    <NavigationPage />
-    <img alt="Vue logo" src="../assets/wallpaper.png">
-    
-    
-    <h1>Best Deals are Here!</h1>
+      <h1>Best Deals are Here!</h1>
+    </div>
   </div>
-</div>
 </template>
 
 <script>
 import NavigationPage from "@/components/NavigationPage.vue";
 //import ShoppingBag from "@/components/ShoppingBag.vue";
 
-
 export default {
   name: "HomePage",
   components: {
     NavigationPage,
     //ShoppingBag,
-    
   },
 };
 </script>
@@ -30,7 +25,6 @@ export default {
 <style scoped>
 .container {
   background: #50a280;
-
 }
 
 .container-header {
@@ -39,17 +33,5 @@ export default {
 
    */
   background: #50a280;
-
 }
 </style>
-
-
-
-
-
-
-
-
-
-
-
