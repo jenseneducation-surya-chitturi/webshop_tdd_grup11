@@ -1,10 +1,10 @@
 import { shallowMount } from '@vue/test-utils'
-import ProductsPage from '@/views/ProductsPage.vue'
+import ProductPage from '@/views/ProductPage.vue'
 
-describe('productspage.vue', () => {
+describe('Productpage.vue', () => {
     let wrapper;
     beforeEach(() => {
-        wrapper = shallowMount(ProductsPage);
+        wrapper = shallowMount(ProductPage);
     })
 
     it('renders the text "Products"', () => {
