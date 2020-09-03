@@ -1,0 +1,40 @@
+{
+	"products": [
+		{
+			"id": 1,
+			"title": "Desk Resin Telephone",
+			"price": 1229,
+			"color":"yellow"
+		},
+		{
+			"id": 2,
+			"title": "Rotary Design Retro",
+			"price": 899,
+			"color":"red"
+		},
+		{
+			"id": 3,
+			"title": "pinky queen",
+			"price": 1022,
+			"color":"green"
+		},
+		{
+			"id": 4,
+			"title": "royal blue",
+			"price": 79,
+			"color":"blue"
+		},
+		{
+			"id": 5,
+			"title": "magical phone",
+			"price": 599,
+			"color":"brown"
+		},
+		{
+			"id": 6,
+			"title": "Carachoe",
+			"price": 999,
+			"color":"grey"
+		}
+	]
+}
