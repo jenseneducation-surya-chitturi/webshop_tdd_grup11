@@ -1,18 +1,55 @@
+
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div class="home">
+
+  <div class="container">
+    <NavigationPage />
+    <img alt="Vue logo" src="../assets/wallpaper.png">
+    
+    
+    <h1>Best Deals are Here!</h1>
   </div>
+</div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import NavigationPage from "@/components/NavigationPage.vue";
+//import ShoppingBag from "@/components/ShoppingBag.vue";
+
 
 export default {
-  name: 'Home',
+  name: "HomePage",
   components: {
-    HelloWorld
-  }
-}
+    NavigationPage,
+    //ShoppingBag,
+    
+  },
+};
 </script>
+
+<style scoped>
+.container {
+  background: #50a280;
+
+}
+
+.container-header {
+  display: flex;
+  /* background: linear-gradient(to bottom, #00ff95, #00ce78);	
+
+   */
+  background: #50a280;
+
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
