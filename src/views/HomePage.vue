@@ -1,7 +1,6 @@
 <template>
   <div class="home">
-    <div class="container">
-      <NavigationPage />
+    <div class="container-home">
       <img alt="Vue logo" src="../assets/wallpaper.png" />
 
       <h1>Best Deals are Here!</h1>
@@ -10,21 +9,25 @@
 </template>
 
 <script>
-import NavigationPage from "@/components/NavigationPage.vue";
+// import NavigationPage from "@/components/NavigationPage.vue";
 //import ShoppingBag from "@/components/ShoppingBag.vue";
 
 export default {
   name: "HomePage",
   components: {
-    NavigationPage,
+    // NavigationPage,
     //ShoppingBag,
   },
 };
 </script>
 
 <style scoped>
-.container {
+.container-home {
   background: #50a280;
+  height: 700px;
+}
+img {
+  margin: 100px;
 }
 
 .container-header {
