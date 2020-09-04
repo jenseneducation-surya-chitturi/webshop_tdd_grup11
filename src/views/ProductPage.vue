@@ -54,7 +54,7 @@ ul {
 li {
   background: whitesmoke;
   box-shadow: 5px 5px 6px;
-  margin: 10px;
+  /* margin: 10px; */
   border-radius: 7.25px;
 
   /* margin: 0 auto; */
