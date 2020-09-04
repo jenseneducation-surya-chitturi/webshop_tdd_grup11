@@ -1,7 +1,7 @@
 import HomePage from '@/views/HomePage.vue'
 import AboutPage from '@/views/AboutPage.vue'
 import ProductPage from '@/views/ProductPage.vue'
-
+import ContactPage from '@/views/ContactPage.vue'
 
 export default [
   {
@@ -15,6 +15,10 @@ export default [
   {
     path: '/products',
     component: ProductPage
+  },
+  {
+    path: '/contact',
+    component: ContactPage
   }
 
 ]
