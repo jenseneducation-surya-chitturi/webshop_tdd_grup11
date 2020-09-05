@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="container-home">
-      <img alt="Vue logo" src="../assets/wallpaper.png" />
+      <img alt="Vue logo" class="homepage-logo" src="../assets/wallpaper.png" />
 
       <h1>Best Deals are Here!</h1>
     </div>
