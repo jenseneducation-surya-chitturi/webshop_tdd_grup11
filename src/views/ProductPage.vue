@@ -1,16 +1,17 @@
 <template>
   <div class="container">
-    <h1>Products</h1>
-   
-    <!-- <Cart/> -->
-<input type="text" v-model="search">
+    <h1> Products
+            <img class="cart" @click="clickCart" v-bind:src="require(`@/assets/images/cart.svg`)">
+        </h1>
+        <div class="counter">{{count}}</div>
+       <input type="text" v-model="search">
     <div class="product-div">
       <ul>
         <li v-for="product in filteredList" :key="product.id">
           <h1>{{ product.title }}</h1>
           <h4>{{ product.color }}</h4>
           <h3>{{ product.price }}</h3>
-        <OrderCounter :product="product"/>
+        <button class="addcart" @click="addToCart(product)">ADD CART</button>
         </li>
       </ul>
     </div>
@@ -19,19 +20,19 @@
 
 <script>
 import axios from "axios";
-//import Cart from "../components/Cart"
-import OrderCounter from "../components/OrderCounter"
-// import CartComponent from "../components/CartComponent"
 export default {
   name: "ProductPage",
   
   components: {
-    OrderCounter,
+  
   },
   data() {
     return {
       search:"",
       products: [],
+      cart: [],
+      count: 0,
+      showCart: false
     };
   },
   async created() {
@@ -48,7 +49,17 @@ export default {
         return product.title.toLowerCase().includes(this.search.toLowerCase())
       })
     }
-  } 
+  },
+   methods: {
+       clickCart() {
+            this.$router.push("/cart");
+        },
+        addToCart(product) {
+            this.cart.push(product);
+            this.count++;
+            console.log(product);
+        }
+    }
  
 };
 </script>
