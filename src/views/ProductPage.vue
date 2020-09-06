@@ -1,10 +1,11 @@
 <template>
   <div class="container">
-    <h1> Products
-            <img class="cart" @click="clickCart" v-bind:src="require(`@/assets/images/cart.svg`)">
-        </h1>
-        <div class="counter">{{count}}</div>
-       <input type="text" v-model="search">
+    <h1>
+      Products
+      <img class="cart" @click="clickCart" v-bind:src="require(`@/assets/images/cart.svg`)" />
+    </h1>
+    <div class="counter">{{count}}</div>
+    <input class="search" type="text" v-model="search" />
     <div class="product-div">
       <ul>
         <li v-for="product in filteredList" :key="product.id">
@@ -13,9 +14,9 @@
           <h1>{{ product.title }}</h1>
           <h4>{{ product.color }}</h4>
           <h3>{{ product.price }}</h3>
-              <OrderCounter  />
+          <OrderCounter />
 
-        <button class="addcart" @click="addToCart(product)">ADD CART</button>
+          <button class="addcart" @click="addToCart(product)">ADD CART</button>
         </li>
       </ul>
     </div>
@@ -62,6 +63,12 @@ export default {
         addToCart(product) {
             this.cart.push(product);
             this.count++;
+			console.log(product);
+			
+		},
+		removeFromCart(product) {
+            this.cart.push(product);
+            this.count--;
             console.log(product);
         }
     }
@@ -70,7 +77,7 @@ export default {
 </script>
 <style scoped>
 .container {
-  background: linear-gradient( #57A859, #50a280);
+  background: linear-gradient(#57a859, #50a280);
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -89,12 +96,19 @@ export default {
   flex-wrap: wrap;
 }
 
+.cart{
+	cursor: pointer;
+	height: 100px;
+	width: 80px;
+	padding-top: 15px;
+}
+
 .color-info {
   position: relative;
   padding: 0;
 }
 ul {
-	background: none;
+  background: none;
 }
 
 li {
@@ -137,27 +151,31 @@ h4 {
   /* padding:5px; */
   justify-content: center;
 }
-
-.addcart{
-	color: #fff;
-	font-size: 14px;
-	background: #4dcc62;
-	/* height: 60px;
+.search{
+	height: 40px;
+	width: 80%;
+	border-radius: 25.5px;
+	border: none;
+	outline: none;
+	padding-left: 15px;
+}
+.addcart {
+  color: #fff;
+  font-size: 14px;
+  background: #4dcc62;
+  /* height: 60px;
 	width: 190px;
 	margin: 120px; */
-	border: none;
-	border-radius: 7.35px;
-	outline: none;
+  border: none;
+  border-radius: 7.35px;
+  outline: none;
 }
 
-
-.addcart:hover{
-	background: #57e26e;
+.addcart:hover {
+  background: #57e26e;
 }
 
-.addcart:active{
-	border-radius: 12.5px;
-
-
+.addcart:active {
+  border-radius: 12.5px;
 }
 </style>
