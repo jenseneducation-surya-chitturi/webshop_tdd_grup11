@@ -23,14 +23,13 @@
 </template>
 
 <script>
-import OrderCounter from '../components/OrderCounter'
+import OrderCounter from "../components/OrderCounter";
 import axios from "axios";
 export default {
   name: "ProductPage",
 
   components: {
-	  
-	  OrderCounter,
+    OrderCounter,
   },
   data() {
     return {
@@ -66,7 +65,6 @@ export default {
       console.log(product);
     },
   },
- 
 };
 </script>
 <style scoped>
