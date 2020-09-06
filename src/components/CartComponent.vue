@@ -1,7 +1,14 @@
-<template></template>
+<template>
+<div class="cart">
+</div>
+</template>
 
 <script>
-export default {};
+export default {
+    methods:{
+     
+    }
+};
 </script>
 
 <style>
