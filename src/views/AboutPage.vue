@@ -2,7 +2,7 @@
   <div class="about-container">
     <h1>This is a about page</h1>
     <div class="wrapper">
-      <img class="" src="" alt="logo" />
+      <img class="Logo" src="../assets/shopLogo.png" alt="logo" />
       <h1 class="title">{{ title }}</h1>
       <p class="description">{{ description }}</p>
     </div>
@@ -21,7 +21,7 @@ export default {
     return {
       title: "About us",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "If you would like to experience the best of online shopping for men, women and kids , you are at the right place. MyShop is the ultimate destination for fashion and lifestyle, being host to a wide array of merchandise including clothing, footwear, accessories, jewellery, personal care products and more. It is time to redefine your style statement with our treasure-trove of trendy items. Our online store brings you the latest in designer products straight out of fashion houses. You can shop online at MyShop from the comfort of your home and get your favourites delivered right to your doorstep."
     };
   }
 };
@@ -29,6 +29,11 @@ export default {
 
 <style scoped>
 .about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   background: #50a280;
   width: auto;
 }
@@ -47,5 +52,11 @@ export default {
   margin: 100px 0;
   text-align: center;
   height: 70vh; 
+}
+.Logo{
+
+  height:80px;
+
+
 }
 </style>
