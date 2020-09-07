@@ -6,6 +6,7 @@
         <li v-for="items in cart" :key="items.id">
           <h1>{{items.color}}</h1>
           <h3>{{items.price}}</h3>
+          <h3>{{items.price}}</h3>
         </li>
       </ul>
     </div>
