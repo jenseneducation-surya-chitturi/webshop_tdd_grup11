@@ -25,17 +25,15 @@ export default {
 <style scoped>
 #footer {
   background: #887f7f;
-  height: 70px;
-  width: 100%;
+  min-height: 100px;
+  width: 99%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  padding: 16px 24px;
   color: white;
 }
 .contact {
-  margin-top: 8px;
   display: flex;
 }
 
@@ -66,6 +64,5 @@ a {
 
 span {
   font-size: 12px;
-  margin-top: 16px;
 }
 </style>
