@@ -1,8 +1,8 @@
 <template>
   <div class="order-counter">
-    <button v-show="orderCount >= 1 " @click="orderCount--">-</button>
+    <button class="decrease-counter" v-show="orderCount >= 1 " @click="orderCount--">-</button>
     <p>{{orderCount}}</p>
-    <button @click="orderCount++">+</button>
+    <button class="increase-counter" @click="orderCount++">+</button>
   </div>
 </template>
 
@@ -35,13 +35,12 @@ button {
   border-radius: 10px;
   /* margin-bottom: 20px; */
   /* margin-right: 20px; */
-margin: 15px;
-
+  margin: 15px;
 }
 
 .order-counter {
-	display: flex;
-	flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 button:hover {
@@ -49,8 +48,8 @@ button:hover {
 }
 
 .p {
-font-style: oblique;
-font-family: serif, Helvetica, sans-serif;
+  font-style: oblique;
+  font-family: serif, Helvetica, sans-serif;
 }
 
 button:active {
