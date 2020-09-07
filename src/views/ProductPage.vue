@@ -3,7 +3,13 @@
     <h1>
       Products
       <img class="cart" @click="clickCart" v-bind:src="require(`@/assets/images/cart.svg`)" />
+      <CartComponent
+		v-bind="cart"
+        @close="showCart = false"
+        v-if="showCart"
+      />
     </h1>
+
     <div class="counter">{{count}}</div>
     <input type="text" v-model="search" />
     <div class="product-div">
@@ -22,14 +28,12 @@
 </template>
 
 <script>
-
 import axios from "axios";
+import CartComponent from "../components/CartComponent";
 export default {
   name: "ProductPage",
 
-  components: {
-    
-  },
+  components: { CartComponent },
   data() {
     return {
       search: "",
@@ -56,28 +60,30 @@ export default {
   },
   methods: {
     clickCart() {
-      this.$router.push("/cart");
+      this.showCart = true;
     },
     addToCart(product) {
       this.cart.push(product);
       this.count++;
       console.log(product);
+
+      //   this.showCart = true;
     },
   },
 };
 </script>
 <style scoped>
- .container {
+.container {
   background: linear-gradient(#57a859, #50a280);
-   max-width: 1440px;
+  max-width: 1440px;
   padding: 1rem 2rem;
   margin: 0 auto 100px auto;
 }
 ul {
-    list-style: none;
-    display: grid;
-    gap: 6rem 1rem;
-    grid-template-columns: repeat(3, 1fr); 
+  list-style: none;
+  display: grid;
+  gap: 6rem 1rem;
+  grid-template-columns: repeat(3, 1fr);
 }
 li {
   background: whitesmoke;
@@ -92,7 +98,6 @@ h1 {
   font-size: 20px;
   top: 0;
   left: 0;
-
 }
 
 h3 {
@@ -100,7 +105,6 @@ h3 {
   font-size: 20px;
   top: 0;
   left: 0;
- 
 }
 
 h4 {
@@ -108,16 +112,15 @@ h4 {
   font-size: 18px;
   top: 0;
   left: 0;
-
 }
 
 .order-counter {
   top: 0;
   left: 0;
- 
+
   justify-content: center;
 }
-input[type=text] {
+input[type="text"] {
   height: 30px;
   width: 20%;
   border-radius: 25.5px;
@@ -132,10 +135,9 @@ input[type=text] {
   border: none;
   border-radius: 10px;
   outline: none;
-      padding: .8rem;
+  padding: 0.8rem;
   font-weight: bold;
-     cursor: pointer;
-  
+  cursor: pointer;
 }
 
 .addcart:hover {
@@ -144,34 +146,33 @@ input[type=text] {
 
 .addcart:active {
   border-radius: 12.5px;
-}  
+}
 .icon {
   padding-left: 300px;
 }
 .cart {
-  background:white;
+  background: white;
   display: flex;
   width: 1.6rem;
   height: 1.6rem;
   padding: 1rem;
   border-radius: 100%;
   float: right;
-  margin-left:-20px;
+  margin-left: -20px;
 }
-  .counter {
-    display: flex;
-    width: 2rem;
-    height: 2rem;
-    color: white;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    background:gray;
-    font-size: 1.1rem;
-    font-weight: 600;
-     float:right;
-     margin-top:-30px;
-     margin-right:-50px;
-  }
-
+.counter {
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background: gray;
+  font-size: 1.1rem;
+  font-weight: 600;
+  float: right;
+  margin-top: -30px;
+  margin-right: -50px;
+}
 </style>
