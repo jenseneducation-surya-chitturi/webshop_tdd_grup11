@@ -13,8 +13,7 @@
 
           <h1>{{ product.title }}</h1>
           <h4>{{ product.color }}</h4>
-          <h3>{{ product.price }}</h3>
-          <OrderCounter />
+          <h3>{{ product.price }}kr</h3>
           <button class="addcart" @click="addToCart(product)">ADD CART</button>
         </li>
       </ul>
@@ -23,13 +22,13 @@
 </template>
 
 <script>
-import OrderCounter from "../components/OrderCounter";
+
 import axios from "axios";
 export default {
   name: "ProductPage",
 
   components: {
-    OrderCounter,
+    
   },
   data() {
     return {
@@ -68,84 +67,59 @@ export default {
 };
 </script>
 <style scoped>
-.container {
+ .container {
   background: linear-gradient(#57a859, #50a280);
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-.color-preview {
-  height: 50%;
-  border-radius: 7.25px;
-  background: #4451c0;
-  background-size: cover;
-  /* border: 1px solid black; */
-}
-
-.product-div {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.cart {
-  cursor: pointer;
-  height: 100px;
-  width: 80px;
-  padding-top: 15px;
-}
-
-.color-info {
-  position: relative;
-  padding: 0;
+   max-width: 1440px;
+  padding: 1rem 2rem;
+  margin: 0 auto 100px auto;
 }
 ul {
-  background: none;
+    list-style: none;
+    display: grid;
+    gap: 6rem 1rem;
+    grid-template-columns: repeat(3, 1fr); 
 }
-
 li {
   background: whitesmoke;
   box-shadow: 5px 5px 6px #00000080;
-  margin: 10px;
+  margin: 20px;
   border-radius: 7.25px;
-  /* padding: 15px; */
-  height: 420px;
-  width: 200px;
+  height: 300px;
+  width: 280px;
 }
-
 h1 {
-  font-weight: 300;
-  font-size: 16px;
+  font-weight: 400;
+  font-size: 20px;
   top: 0;
   left: 0;
-  /* padding:5px; */
+
 }
 
 h3 {
   font-weight: 300;
-  font-size: 14px;
+  font-size: 20px;
   top: 0;
   left: 0;
-  /* padding:5px; */
+ 
 }
 
 h4 {
   font-weight: 300;
-  font-size: 14px;
+  font-size: 18px;
   top: 0;
   left: 0;
-  /* padding:5px; */
+
 }
 
 .order-counter {
   top: 0;
   left: 0;
-  /* padding:5px; */
+ 
   justify-content: center;
 }
-.search {
-  height: 40px;
-  width: 80%;
+input[type=text] {
+  height: 30px;
+  width: 20%;
   border-radius: 25.5px;
   border: none;
   outline: none;
@@ -153,14 +127,15 @@ h4 {
 }
 .addcart {
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
   background: #4dcc62;
-  /* height: 60px;
-	width: 190px;
-	margin: 120px; */
   border: none;
-  border-radius: 7.35px;
+  border-radius: 10px;
   outline: none;
+      padding: .8rem;
+  font-weight: bold;
+     cursor: pointer;
+  
 }
 
 .addcart:hover {
@@ -169,5 +144,34 @@ h4 {
 
 .addcart:active {
   border-radius: 12.5px;
+}  
+.icon {
+  padding-left: 300px;
 }
+.cart {
+  background:white;
+  display: flex;
+  width: 1.6rem;
+  height: 1.6rem;
+  padding: 1rem;
+  border-radius: 100%;
+  float: right;
+  margin-left:-20px;
+}
+  .counter {
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background:gray;
+    font-size: 1.1rem;
+    font-weight: 600;
+     float:right;
+     margin-top:-30px;
+     margin-right:-50px;
+  }
+
 </style>
