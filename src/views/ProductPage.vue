@@ -2,15 +2,8 @@
   <div class="container">
     <h1>
       Products
-      <img class="cart" @click="clickCart" v-bind:src="require(`@/assets/images/cart.svg`)" />
-      <CartComponent
-		v-bind="cart"
-        @close="showCart = false"
-        v-if="showCart"
-      />
+      <CartComponent v-bind:cart="cart" v-bind:count="count" @delete-productpage="deleteIncart" />
     </h1>
-
-    <div class="counter">{{count}}</div>
     <input type="text" v-model="search" />
     <div class="product-div">
       <ul>
@@ -40,7 +33,6 @@ export default {
       products: [],
       cart: [],
       count: 0,
-      showCart: false,
     };
   },
   async created() {
@@ -59,15 +51,15 @@ export default {
     },
   },
   methods: {
-    clickCart() {
-      this.showCart = true;
-    },
     addToCart(product) {
       this.cart.push(product);
       this.count++;
-      console.log(product);
-
       //   this.showCart = true;
+    },
+    deleteIncart(item) {
+      const index = this.cart.findIndex((product) => product.id === item.id);
+      this.cart.splice(index, 1);
+      this.count--;
     },
   },
 };
