@@ -1,30 +1,40 @@
 <template>
   <div class="cart-container">
-    <button class="cart-default-button" @click="$emit('close')">Close</button>
-    <div class="cart-list">
-      <ul>
-        <li v-for="items in cart" :key="items.id">
-          <h1>{{items.color}}</h1>
-          <h3>{{items.price}}</h3>
-          <h3>{{items.price}}</h3>
-        </li>
-      </ul>
-    </div>
+    <img class="cart" @click="showCart = !showCart" :src="require(`@/assets/images/cart.svg`)" />
+    <div class="counter">{{count}}</div>
+    <CartList
+      v-bind:cart="cart"
+      v-bind:showCart="showCart"
+      @update-showCart="disableCart"
+      @delete-product="deleteincartcomponent"
+      v-if="showCart"
+    />
   </div>
 </template>
 
 <script>
+import CartList from "@/components/CartList";
 export default {
   name: "CartComponent",
-  props: ['cart'],
-  methods: {},
+  components: {
+    CartList,
+  },
+  props: ["cart", "count"],
+  data() {
+    return {
+      showCart: false,
+    };
+  },
+  methods: {
+    disableCart() {
+      return (this.showCart = false);
+    },
+    deleteincartcomponent(item, count) {
+      this.$emit("delete-productpage", { item, count });
+    },
+  },
 };
 </script>
 
-<style scoped>
-.cart-container {
-  height: 33vh;
-  width: 22vh;
-  background: darkgrey;
-}
+<style>
 </style>
