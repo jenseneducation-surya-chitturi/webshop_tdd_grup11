@@ -1,7 +1,7 @@
 <template>
   <div class="cartitem-container">
     <h6>{{item.title}}</h6>
-    <button @click="deleteItem">Delete</button>
+    <button class="del-btn" @click="deleteItem">Delete</button>
     <h4>{{item.price}}</h4>
   </div>
 </template>
@@ -21,5 +21,26 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.cartitem-container{
+display: inline-block;
+margin-right: 20px;
+}
+
+
+.del-btn{
+	background: #810000;
+	color: #fff;
+	outline: none;
+}
+
+.del-btn:hover{
+	background: #ff0000;
+	
+}
+
+.del-btn:active{
+	background: #ff0000;
+	
+}
 </style>

@@ -37,4 +37,8 @@ export default {
 </script>
 
 <style>
+
+.cart{
+	cursor: pointer;
+}
 </style>
