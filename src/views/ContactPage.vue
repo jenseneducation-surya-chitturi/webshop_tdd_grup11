@@ -2,13 +2,13 @@
   <div class="conatiner-contact">
     <h1 class="contact-header">Contact Us</h1>
     <form @submit.prevent="handleSubmit" class="contact-form">
-      <input required name="name" placeholder="Name" type="text" v-model="username" data-username />
-      <input required name="email" placeholder="Email" type="text"/>
+      <input required name="name" placeholder="Name" type="text" v-model="userName" data-userName />
+      <input required name="email" placeholder="Email" type="text" v-model="userEmail" data-userEmail/>
       <textarea name="message" rows="4" placeholder="Your Message"></textarea>
       <!-- <button class="form-button" @click.stop.prevent="handleSubmit()">Send</button> -->
       <input type="submit">
     </form>
-    <div class="msg" v-if="submitted">Thank you for your Message, {{ username }}</div>
+    <div class="msg" v-if="submitted">Thank you for your Message, {{ userName }}</div>
   </div>
 </template>
 
@@ -18,8 +18,10 @@ export default {
 
   data() {
     return {
-      username: "",
+      userName: "",
       submitted: false,
+      userEmail: "",
+      submited: false,
     };
   },
 
@@ -37,6 +39,7 @@ export default {
   width: 100%;
   height: 600px;
 }
+
 .contact-form {
   display: grid;
   grid-template-columns: auto;
@@ -49,6 +52,7 @@ export default {
   width: 60%;
   margin: 0 auto;
 }
+
 .form-button {
   color: black;
   cursor: pointer;
@@ -68,6 +72,7 @@ export default {
 .form-button:hover {
   background-color: limegreen;
 }
+
 .msg {
   color: black;
   font-family: Georgia, "Times New Roman", Times, serif;
