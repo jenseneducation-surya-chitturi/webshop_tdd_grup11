@@ -1,6 +1,7 @@
 <template>
   <div class="cartitem-container">
     <h6>{{item.title}}</h6>
+    <img class="cartitem-image" :src="require('../assets/' + item.image + '.png')" />
     <OrderCounter />
     <button class="del-btn" @click="deleteItem">Delete</button>
     <h4>{{item.price}}</h4>
@@ -32,12 +33,15 @@ export default {
   margin-right: 20px;
 }
 
-
 .del-btn:hover {
   background: #ff0000;
 }
 
 .del-btn:active {
   background: #ff0000;
+}
+.cartitem-image {
+  width: 60px;
+  height: 50px;
 }
 </style>

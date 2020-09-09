@@ -47,19 +47,18 @@ export default {
 
 <style scoped>
 .cart-container {
-
   background: rgb(159, 240, 195);
   display: grid;
   /* grid-template-rows: repeat(3,1fr); */
   position: absolute;
+  width: 95%;
+  height: 90%;
 }
 
 li {
   list-style: none;
   /* padding-top: 10px;
 		margin-top:11px ; */
-}
-
 }
 .cart-header {
   margin: 10px 10px;
