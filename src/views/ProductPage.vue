@@ -1,12 +1,8 @@
 <template>
   <div class="container">
-    <h1>
+    <h1 class="product-head">
       Products
-      <CartComponent
-        v-bind:cart="cart"
-        v-bind:count="count"
-        @delete-productpage="deleteIncart"
-      />
+      <CartComponent v-bind:cart="cart" v-bind:count="count" @delete-productpage="deleteIncart" />
     </h1>
     <input type="text" v-model="search" />
     <div class="product-div">
@@ -74,6 +70,10 @@ export default {
   max-width: 1440px;
   padding: 1rem 2rem;
   margin: 0 auto 100px auto;
+}
+.product-head {
+  font-weight: 800;
+  font-size: 24px;
 }
 ul {
   list-style: none;
