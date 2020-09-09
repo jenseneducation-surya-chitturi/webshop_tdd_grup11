@@ -37,8 +37,31 @@ export default {
 </script>
 
 <style>
-
-.cart{
-	cursor: pointer;
+.cart {
+  cursor: pointer;
+}
+.cart {
+  background: white;
+  display: flex;
+  width: 1.6rem;
+  height: 1.6rem;
+  padding: 1rem;
+  border-radius: 100%;
+  float: right;
+  margin-left: -20px;
+}
+.counter {
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background: gray;
+  font-size: 1.1rem;
+  font-weight: 600;
+  float: right;
+  margin-right: -50px;
 }
 </style>
