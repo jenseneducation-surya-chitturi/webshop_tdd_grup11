@@ -62,8 +62,8 @@ describe('productPage.vue', () => {
 
   it('should have "p" show "pink" and "purple" ', async () => {
 
-    const input = wrapper.find('input');
-    await input.setValue('pinky');
+    const input = wrapper.find('input')
+    await input.setValue('pinky')
 
     let results = wrapper.findAll('.product-title').wrappers;
     console.log(results);
