@@ -149,9 +149,6 @@ input[type="text"] {
 .icon {
   padding-left: 300px;
 }
-  .product-image {
-        width: 100%;
-        height: 100px;
-      }
+
 
 </style>
