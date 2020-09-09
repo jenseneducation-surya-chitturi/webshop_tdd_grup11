@@ -1,12 +1,11 @@
 import { shallowMount } from '@vue/test-utils'
-import HelloWorld from '@/components/HelloWorld.vue'
+import CartList from '@/components/CartList.vue'
 
-describe('HelloWorld.vue', () => {
+describe('CartList.vue', () => {
   it('renders props.msg when passed', () => {
-    const msg = 'new message'
-    const wrapper = shallowMount(HelloWorld, {
-      propsData: { msg }
-    })
-    expect(wrapper.text()).toMatch(msg)
+    const msg = 'Your order'
+    const wrapper = shallowMount(CartList)
+    const heading = wrapper.find('.cart-header')
+    expect(heading.text()).toMatch(msg)
   })
 })

@@ -2,7 +2,11 @@
   <div class="container">
     <h1>
       Products
-      <CartComponent v-bind:cart="cart" v-bind:count="count" @delete-productpage="deleteIncart" />
+      <CartComponent
+        v-bind:cart="cart"
+        v-bind:count="count"
+        @delete-productpage="deleteIncart"
+      />
     </h1>
     <input type="text" v-model="search" />
     <div class="product-div">
@@ -10,7 +14,7 @@
         <li v-for="product in filteredList" :key="product.id">
           <div class="color-preview"></div>
 
-          <h1>{{ product.title }}</h1>
+          <h1 class="product-title">{{ product.title }}</h1>
           <h4>{{ product.color }}</h4>
           <h3>{{ product.price }}kr</h3>
           <button class="addcart" @click="addToCart(product)">ADD CART</button>

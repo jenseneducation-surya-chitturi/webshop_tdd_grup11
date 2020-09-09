@@ -1,7 +1,7 @@
 <template>
   <div class="about-container">
     <h1>Buy the best value Products</h1>
-    <div class="wrapper">
+    <div class="wrapper-about">
       <img class="Logo" src="../assets/shopLogo.png" alt="logo" />
       <h1 class="title">{{ title }}</h1>
       <p class="description">{{ description }}</p>
@@ -37,7 +37,7 @@ export default {
   background: #50a280;
   width: auto;
 }
-.wrapper {
+.wrapper-about {
   padding: 20px 32px;
   /* padding: 2rem 0; */
 }
