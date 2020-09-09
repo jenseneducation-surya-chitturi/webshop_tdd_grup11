@@ -32,11 +32,6 @@ export default {
   margin-right: 20px;
 }
 
-.del-btn {
-  background: #810000;
-  color: #fff;
-  outline: none;
-}
 
 .del-btn:hover {
   background: #ff0000;

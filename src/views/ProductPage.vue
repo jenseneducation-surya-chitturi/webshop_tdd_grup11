@@ -11,7 +11,10 @@
           <div class="color-preview"></div>
 
           <h1 class="product-title">{{ product.title }}</h1>
-          <h4>{{ product.color }}</h4>
+          <img
+          class="product-image"
+          :src="require('../assets/' + product.image + '.png')"
+        />
           <h3>{{ product.price }}kr</h3>
           <button class="addcart" @click="addToCart(product)">ADD CART</button>
         </li>
@@ -146,4 +149,6 @@ input[type="text"] {
 .icon {
   padding-left: 300px;
 }
+
+
 </style>
