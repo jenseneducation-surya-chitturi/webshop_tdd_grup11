@@ -1,0 +1,25 @@
+krishna mohan paruchui FWK19S
+Surya Chitturi  FWK19S
+Sinny Jamwal  FWK19S
+Oskar Ljungdahl FWK19S
+Razieh Rouzbahani FRK19s
+
+GitHub link till repo
+https://github.com/krishnamohanparuchuri/webshop_tdd_grup11
+
+github link to presentation
+https://github.com/krishnamohanparuchuri/grupp_presentation
+
+Trello board link
+https://trello.com/b/0E9CRt5B/group-11
+
+Figma links
+https://www.figma.com/file/XXiVFZf2nEBS3yLR0H06F3/vue-TDD?node-id=0%3A1
+
+
+links for retrospective
+https://docs.google.com/document/d/1dNYNVmRvQG6eOyyM-YVOluudDVmGLZPOaiufDj-ryMQ/edit
+
+link to Krav spec
+https://docs.google.com/document/d/10wfxQsy5N8RrLz2ovsOFArTq5nIOYXI9KvD7lDZxR9Q/edit
+
