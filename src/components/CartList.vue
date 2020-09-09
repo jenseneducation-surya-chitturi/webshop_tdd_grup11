@@ -44,8 +44,8 @@ export default {
 
 <style scoped>
 .cart-container {
-  height:40vh;
-  width: 40vw;
+  height:70%;
+  width:70%;
   background: rgb(159, 240, 195);
   display: grid;
   /* grid-template-rows: repeat(3,1fr); */
@@ -60,7 +60,6 @@ li{
 		margin-top:11px ; */
 }
 .cart-default-button{
-	background-color: black;
 	color: #fff;
 	cursor: pointer;
 	height: 20px;
@@ -69,6 +68,7 @@ li{
 
 .cart-default-button:hover{
 	background-color: #222;
+
 	
 }
 .cart-header{

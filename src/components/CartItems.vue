@@ -29,7 +29,7 @@ margin-right: 20px;
 
 
 .del-btn{
-	background: #810000;
+	background: #d3bcbc;
 	color: #fff;
 	outline: none;
 }
