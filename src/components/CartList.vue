@@ -1,6 +1,7 @@
 <template>
   <div class="cart-container">
     <button class="cart-default-button" @click.prevent="closeCartList(showCart)">Close</button>
+    <button class="cart-default-button" @click.prevent="emptyCart(cart)">Empty cart</button>
     <h3 class="cart-header">Your order</h3>
     <ul>
       <li>
@@ -32,7 +33,9 @@ export default {
   },
   props: ["cart", "showCart"],
   data() {
-    return {};
+    return {
+      totalamount: 0,
+    };
   },
   methods: {
     closeCartList(showCart) {
@@ -41,6 +44,9 @@ export default {
     deleteIncart(item) {
       this.$emit("delete-product", item);
     },
+    emptyCart(cart) {
+      this.$emit("empty-cart", cart);
+    },
   },
 };
 </script>
@@ -48,11 +54,18 @@ export default {
 <style scoped>
 .cart-container {
   background: rgb(159, 240, 195);
-  display: grid;
   /* grid-template-rows: repeat(3,1fr); */
   position: absolute;
-  width: 95%;
-  height: 90%;
+  width: 60%;
+  min-height: 40%;
+  top: 185px;
+  right: 10px;
+}
+.cart-default-button {
+  margin: 20px;
+  border: 2px solid grey;
+  border-radius: 5px;
+  box-shadow: 5px 5px 6px #00000080;
 }
 
 li {

@@ -2,7 +2,12 @@
   <div class="container">
     <h1 class="product-head">
       Products
-      <CartComponent v-bind:cart="cart" v-bind:count="count" @delete-productpage="deleteIncart" />
+      <CartComponent
+        v-bind:cart="cart"
+        v-bind:count="count"
+        @delete-productpage="deleteIncart"
+        @removeItems="cartTozero"
+      />
     </h1>
     <input type="text" v-model="search" />
     <div class="product-div">
@@ -52,14 +57,23 @@ export default {
   },
   methods: {
     addToCart(product) {
-      this.cart.push(product);
-      this.count++;
+      let checkProduct = this.cart.filter((check) => check.id === product.id);
+      if (checkProduct.length > 0) {
+        this.cart;
+      } else {
+        this.cart.push(product);
+        this.count++;
+      }
       //   this.showCart = true;
     },
     deleteIncart(item) {
       const index = this.cart.findIndex((product) => product.id === item.id);
       this.cart.splice(index, 1);
       this.count--;
+    },
+    cartTozero() {
+      this.cart = [];
+      this.count = 0;
     },
   },
 };

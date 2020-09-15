@@ -8,6 +8,8 @@
       @update-showCart="disableCart"
       @delete-product="deleteincartcomponent"
       v-if="showCart"
+      v-bind:count="count"
+      @empty-cart="eraseCart"
     />
   </div>
 </template>
@@ -31,6 +33,9 @@ export default {
     },
     deleteincartcomponent(item, count) {
       this.$emit("delete-productpage", { item, count });
+    },
+    eraseCart(cart, count) {
+      this.$emit("removeItems", { cart, count });
     },
   },
 };
@@ -73,7 +78,6 @@ export default {
   border-radius: 100%;
   float: right;
   margin-left: -20px;
-
 }
 .counter {
   display: flex;
