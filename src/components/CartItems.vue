@@ -36,7 +36,7 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   text-align: center;
-  margin: 10px 20px;
+  margin: 0;
   border: 2px solid grey;
   border-radius: 3px;
   box-shadow: 5px 5px 6px #00000080;
@@ -44,15 +44,22 @@ export default {
 .cartitem-left {
   display: flex;
   flex-direction: column;
+  justify-items: center;
+  align-items: flex-end;
 }
 .cartitem-left h6 {
-  font-size: 16px;
+  font-size: 12px;
   margin: 0;
   align-items: center;
 }
-.cartitem-right button {
-  margin: 10px;
-  padding: 10px;
+.cartitem-right {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+.del-btn {
+  margin: 2px;
+  padding: 5px;
 }
 
 .del-btn:hover {

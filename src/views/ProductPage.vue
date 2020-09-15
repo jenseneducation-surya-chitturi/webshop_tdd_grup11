@@ -67,7 +67,8 @@ export default {
       //   this.showCart = true;
     },
     deleteIncart(item) {
-      const index = this.cart.findIndex((product) => product.id === item.id);
+      const index = this.cart.find((product) => product.id === item.id);
+      console.log(index);
       this.cart.splice(index, 1);
       this.count--;
     },

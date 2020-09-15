@@ -37,19 +37,19 @@ export default {
 
 <style scoped>
 button {
-  height: 30px;
-  width: 30px;
-  font-size: 16px;
+  height: 15px;
+  width: 15px;
+  font-size: 12px;
   font-weight: bold;
   border: none;
   background: linear-gradient(to bottom, #222, #333);
   color: #fff;
   outline: none;
   animation: 0.3s all ease-in-out;
-  border-radius: 5px;
+  border-radius: 2px;
   /* margin-bottom: 20px; */
   /* margin-right: 20px; */
-  margin: 15px;
+  margin: 5px;
 }
 
 .order-counter {
@@ -59,14 +59,17 @@ button {
 .order-right {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
-.order-right p {
-  font-size: 16px;
-  margin: 5px;
+.order-right > p {
+  font-size: 8px;
+  margin: 2px;
 }
 .order-left {
   display: flex;
   flex-direction: row;
+  justify-items: center;
+  align-items: center;
 }
 
 button:hover {
