@@ -19,7 +19,13 @@ export default [
   {
     path: '/contact',
     component: ContactPage
-  }
+  },
+  {
+    path: '/product/:id',
+    name: 'detail',
+    props: true,
+    component: () => import('@/components/Detail.vue'),
+  },
 
 ]
 

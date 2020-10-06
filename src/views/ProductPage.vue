@@ -11,8 +11,9 @@
           <div class="color-preview"></div>
 
           <h1 class="product-title">{{ product.title }}</h1>
-          <img class="product-image" :src="require('../assets/' + product.image + '.png')" />
-          <h3>{{ product.price }}kr</h3>
+          <img class="product-image" :src="require('../assets/' + product.image + '.png')"
+           @click="$router.push({ name: 'detail', params: { id: product.id, product } })" />
+          <h3>{{ product.price }} kr</h3>
           <button class="addcart" @click="addToCart(product)">ADD CART</button>
         </li>
       </ul>
